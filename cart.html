@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Butek's Online</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .carousel {
+      height: 60vh;
+    }
+    .label{
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      z-index: 2;
+    }
+    .label-right{
+      position: absolute;
+      background-color: rgba(240, 240, 100, 0.842) !important;
+      color: black !important;
+      right: 20px;
+      top: 20px;
+      z-index: 2;
+    }
+    .badge-right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height:25px;
+      width: 38px;
+      background-color: rgba(199, 207, 81, 0.884);
+      z-index: 2;
+      transition: 0.5s;
+    }
+    .cat-image{
+      position: relative;
+      width: 293px;
+      height: 193px;
+      margin-bottom: 40px;
+    }
+    .categories .cat-image h3{
+      position: absolute;
+      color: white;
+      font-weight: 400;
+      bottom: 0;
+      right: 10px;
+      z-index: 2;
+    }
+
+    @media (max-width: 740px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
+      }
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark elegant-color scrolling-navbar">
+<div class="container">
+  <a class="navbar-brand" href="index.html">
+    <strong>BUTEK'S ONLINE</strong>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav nav-flex-icons">
+      <li class="nav-item">
+        <a href="cart.html" class="nav-link waves-effect">
+          <span class="badge red z-depth-1 rounded">2</span>
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="shop.html">Shop</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="blog.html">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">Sign In</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signup.html">Sign Up</a>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
+</nav>
+
+<main class="mt-5 pt-4">
+  <div class="container wow fadeIn">
+    <h2 class="h2 text-center mt-5 mb-5">Shopping cart</h2>
+    <div class="row">
+      <div class="col-md-8 mb-4">
+        <div class="card">
+          <h5 style="font-weight: 400;" class="mt-3 px-4 ">Cart(2 items)</h5>
+
+          <div class="main-cart">
+            <div class="cart mt-3">
+              <img class="cart-img rounded ml-4 mb-3" src="./assets/denim.jpg" alt="">
+            </div>
+
+            <div class="cart-info text-muted ml-0">
+              <p class="d-inline ">
+                <span class="mb-0" style="font-weight: 500;">Product title</span>
+                <span class="btns" style="margin-left: 17em;">
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                    <button id="minus" class="btn btn-outline px-3 rounded mr-0 ml-0"><i class="fas fa-minus" aria-hidden="true"></i></button>
+                    <button id="minus" class="btn btn-oultine px-3 rounded mr-0 ml-0">2</button>
+                    <button id="plus" class="btn btn-outline px-3 rounded ml-0 pl-0"><i class="fas fa-plus" aria-hidden="true"></i></button>
+                  </div> 
+                </span>
+              </p>
+              <p class="mt-0 ">SHIRT
+              <p class="">COLOR: BLUE</p>
+              <p class="">SIZE: M</p>
+              <p class="">
+                <span><i class="fas fa-trash-alt text-muted mr-1"></i>REMOVE ITEM</span>
+                <span class="ml-3"><i class="fas fa-heart text-muted mr-1"></i>ADD TO WISH LIST</span>
+                <span style="margin-left: 9em;">$200</span>
+              </p>
+            </div>
+          </div>
+
+          <hr class="my-3">
+
+          <div class="main-cart">
+            <div class="cart mt-3">
+              <img class="cart-img rounded ml-3 mb-3" src="./assets/hoodie.jpg" alt="">
+              
+            </div>
+
+            <div class="cart-info text-muted">
+              <p class="d-inline ">
+                <span class="mb-0">Product title</span>
+                <span class="btns" style="margin-left: 17em;">
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                    <button id="minus" class="btn btn-outline px-3 rounded mr-0 ml-0"><i class="fas fa-minus" aria-hidden="true"></i></button>
+                    <button id="minus" class="btn btn-oultine px-3 rounded mr-0 ml-0">2</button>
+                    <button id="plus" class="btn btn-outline px-3 rounded ml-0 pl-0"><i class="fas fa-plus" aria-hidden="true"></i></button>
+                  </div>
+                </span>
+              </p>
+              <p class="mt-0 ">SHIRT
+              <p class="">COLOR: BLUE</p>
+              <p class="">SIZE: M</p>
+              <p class="">
+                <span><i class="fas fa-trash-alt text-muted mr-1"></i>REMOVE ITEM</span>
+                <span class="ml-3"><i class="fas fa-heart text-muted mr-1"></i>ADD TO WISH LIST</span>
+                <span style="margin-left: 10em;">$200</span>
+              </p>
+            </div>
+          </div>
+
+          <hr class="my-3">
+
+          <div class="main-cart">
+            <div class="cart mt-3">
+              <img class="cart-img rounded ml-3 mb-3" src="./assets/sweater.jpg" alt="">
+              
+            </div>
+
+            <div class="cart-info text-muted">
+              <p class="d-inline ">
+                <span class="mb-0">Product title</span>
+                <span class="btns" style="margin-left: 17em;">
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                    <button id="minus" class="btn btn-outline px-3 rounded mr-0 ml-0"><i class="fas fa-minus" aria-hidden="true"></i></button>
+                    <button id="minus" class="btn btn-oultine px-3 rounded mr-0 ml-0">2</button>
+                    <button id="plus" class="btn btn-outline px-3 rounded ml-0 pl-0"><i class="fas fa-plus" aria-hidden="true"></i></button>
+                  </div>
+                </span>
+              </p>
+              <p class="mt-0 ">SHIRT
+              <p class="">COLOR: BLUE</p>
+              <p class="">SIZE: M</p>
+              <p class="">
+                <span><i class="fas fa-trash-alt text-muted mr-1"></i>REMOVE ITEM</span>
+                <span class="ml-3"><i class="fas fa-heart text-muted mr-1"></i>ADD TO WISH LIST</span>
+                <span style="margin-left: 10em;">$200</span>
+              </p>
+            </div>
+          </div>
+
+          <hr class="my-3">
+          <p class="text-primary text-center"><i class="fas fa-info-circle text-primary"></i> Don't delay the purchase, adding items to your cart doesn't mean booking them.</p>
+        </div>
+
+        <div class="card mt-4" style="padding: 25px;">
+          <h5><b>Expected delivery time</b></h5>
+          <h6 class="mt-2 text-muted"><strong> 12:45PM - Monday 12:45PM</strong></h6>
+        </div>
+
+        <div class="card mt-4" style="padding: 25px 25px 0 25px">
+          <h5><b>We accept</b></h5>
+          <p>
+            <span><img class="accept-img" src="./assets/visa.png" alt=""></i></span>
+            <span><img class="master" src="./assets/master.png" alt=""></i></span>
+            <span><img class="paypal" src="./assets/paypal.png" alt=""></i></span>
+            <span><img class="accept-img mpesa" src="./assets/mpesa.png" alt=""></i></span>
+          </p>
+        </div>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-4 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Your cart</span>
+        <span class="badge badge-secondary badge-pill">1</span>
+        </h4>
+        <ul class="list-group mb-3 z-depth-1">
+          <h5 style="font-weight: 400; padding:10px;">Your order summary</h5>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+              <h6 style="font-weight: 400;" class="my-0">
+                  3 x Product title
+              </h6>
+              <small class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, corporis.</small>
+              </div>
+              <span class="text-muted">$200</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>
+              <strong>Shipping fees</strong> 
+            </span>
+            <span>
+              <strong class="float-right">$200</strong>
+            </span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+          <div class="text-success">
+              <h6 style="font-weight: 450;" class="my-0">Promo code</h6>
+              <small style="font-weight: 450;">TEST</small>
+          </div>
+          <span class="text-success"><b>-$30</b></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>
+              <strong>Total (USD)</strong>
+              <br>
+              <small>(including VAT)</small>
+            </span>
+            <strong class="mt-3">$200</strong>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <a href="payment.html" class="btn btn-primary rounded btn-block">PROCEED TO CHECKOUT</a>
+          </li> 
+        </ul>
+
+        <p class="text-center" style="font-weight: 400;">Enter a coupon code(optional) 
+          <i style="cursor: pointer;" id="arrow" class="fas fa-chevron-circle-down text-primary ml-4"></i>
+        </p>
+        <form id="hideable-form" class=" form card p-2" method="POST" action="">
+          <div class="input-group">
+            <input
+            type="text"
+            name="code"
+            class="form-control"
+            placeholder="Promo code"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-primary btn-md waves-effect m-0" type="submit">
+                  Redeem
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="page-footer font-small elegant-color-dark">
+
+  <div style="background-color: #1e1e1f;">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">Get connected with us on social networks!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram white-text"> </i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Company name</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+          consectetur
+          adipisicing elit.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Products</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">MDBootstrap</a>
+        </p>
+        <p>
+          <a href="#!">MDWordPress</a>
+        </p>
+        <p>
+          <a href="#!">BrandFlow</a>
+        </p>
+        <p>
+          <a href="#!">Bootstrap Angular</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">Your Account</a>
+        </p>
+        <p>
+          <a href="#!">Become an Affiliate</a>
+        </p>
+        <p>
+          <a href="#!">Shipping Rates</a>
+        </p>
+        <p>
+          <a href="#!">Help</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+
+<script>
+  var form = document.getElementById('hideable-form')
+  var arrow = document.getElementById('arrow')
+  arrow.addEventListener('click', function(e) {
+    e.preventDefault();
+    form.classList.toggle('form')
+  })
+</script>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript">
+  new WOW().init();
+
+</script>
+</body>
+
+</html>
+
+  
+
+
+
