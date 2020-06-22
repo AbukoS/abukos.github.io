@@ -16,70 +16,6 @@
     <link href="css/mdb.min.css" rel="stylesheet" />
     <link href="css/style.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="main.css" />
-    <style type="text/css">
-      html,
-      body,
-      header,
-      .carousel {
-        height: 60vh;
-      }
-      .label {
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        z-index: 2;
-      }
-      .label-right {
-        position: absolute;
-        background-color: rgba(240, 240, 100, 0.842) !important;
-        color: black !important;
-        right: 20px;
-        top: 20px;
-        z-index: 2;
-      }
-      .badge-right {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 25px;
-        width: 38px;
-        background-color: rgba(199, 207, 81, 0.884);
-        z-index: 2;
-        transition: 0.5s;
-      }
-      .cat-image {
-        position: relative;
-        width: 293px;
-        height: 193px;
-        margin-bottom: 40px;
-      }
-      .categories .cat-image h3 {
-        position: absolute;
-        color: white;
-        font-weight: 400;
-        bottom: 0;
-        right: 10px;
-        z-index: 2;
-      }
-
-      @media (max-width: 740px) {
-        html,
-        body,
-        header,
-        .carousel {
-          height: 100vh;
-        }
-      }
-
-      @media (min-width: 800px) and (max-width: 850px) {
-        html,
-        body,
-        header,
-        .carousel {
-          height: 100vh;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -133,18 +69,24 @@
         </div>
       </div>
     </nav>
+    <style>
+      .hide{
+        display: none;
+      }
+    </style>
 
-    <main class="mt-5 pt-4">
+    <main class="mt-5 pt-3">
       <div class="container">
-        <section class="mt-5 wow fadeIn">
-          <div>
+        <section class="wow fadeIn">
+          <div class="mt-0 pt-0">
+            <span class="ham-menu  float-left"><i id="ham-menu" class="fas fa-bars fa-2x text-muted"></i></span>
             <h4 class="section-title">Shop</h4>
           </div>
           <div class="shop-container">
             <!-- left-side-menu -->
-            <div class="menu">
+            <div id="menu-items" class="menu">
               <!-- left-side-sub-menus -->
-              <div>
+              <div class="menu-items">
                 <h4 style="font-weight: 450;">Categories</h4>
                 <div class="sub-menu ml-4">
                   <a
@@ -253,7 +195,7 @@
               </div>
               <!-- left-side-sub-menus -->
 
-              <!-- Search form -->
+              <!-- Search bar -->
               <div>
                 <h5 style="font-weight: 400;" class="mt-4">Search here...</h5>
                 <form class="form-inline active-cyan-4">
@@ -266,7 +208,7 @@
                   <i class="fas fa-search" aria-hidden="true"></i>
                 </form>
               </div>
-              <!-- Search form -->
+              <!-- Search bar -->
 
               <!-- Customer review -->
               <div>
@@ -403,16 +345,16 @@
             <div class="shop-content">
               <div class="header-paragraph">
                 <p class="text-center">
-                  <a class="text-muted" href="shop_list.html">
+                  <a class="list-btn text-muted" href="shop_list.html">
                     <span><i class="fas fa-th-list fa-2x mr-1"></i></span>
                   </a>
-                  <a class="text-muted" href="shop.html">
+                  <a class="list-btn text-muted" href="shop.html">
                     <span><i class="fas fa-th-large fa-2x"></i></span>
                   </a>
                   <span>
                     <div
                       style="width: 300px;"
-                      class="md-form md-outline form-sm mt-0 pt-0"
+                      class="input-form md-form md-outline form-sm mt-0 pt-0"
                     >
                       <input
                         list="list-options"
@@ -469,44 +411,8 @@
                   >
                     Ubiquiti wifi wall router
                   </p>
-                  <div class="text-center">
-                    <button class="btn btn-primary btn-sm rounded">
-                      <i class="fas fa-cart-plus"></i>
-                    </button>
-                    <a href="detail.html" class="btn btn-outline btn-sm rounded"
-                      ><i class="fas fa-info-circle mr-2"></i>DETAILS</a
-                    >
-                  </div>
-                </div>
-                <div class="shop-image-div">
-                  <img src="./assets/fabrics.jpg" class="shop-image rounded" />
-                  <h4>
-                    <b
-                      >Product title(1Kg)
-                      <br />
-                      $200
-                    </b>
-                  </h4>
-                  <div class="text-center">
-                    <button class="btn btn-primary btn-sm rounded">
-                      <i class="fas fa-cart-plus"></i>
-                    </button>
-                    <a href="detail.html" class="btn btn-outline btn-sm rounded"
-                      ><i class="fas fa-info-circle mr-2"></i>DETAILS</a
-                    >
-                  </div>
-                </div>
-                <div class="shop-image-div">
-                  <img src="./assets/banner1.jpg" class="shop-image rounded" />
-                  <h4>
-                    <b
-                      >Product title(1Kg)
-                      <br />
-                      $200
-                    </b>
-                  </h4>
-                  <div class="text-center">
-                    <button class="btn btn-primary btn-sm rounded">
+                  <div class="text-center div-details">
+                    <button class="btn btn-primary btn-sm rounded add-to-cart">
                       <i class="fas fa-cart-plus"></i>
                     </button>
                     <a href="detail.html" class="btn btn-outline btn-sm rounded"
@@ -516,51 +422,14 @@
                 </div>
                 <div class="shop-image-div">
                   <img src="./assets/hoodie.jpg" class="shop-image rounded" />
-                  <h4>
-                    <b
-                      >Product title(1Kg)
-                      <br />
-                      $200
-                    </b>
-                  </h4>
-                  <div class="text-center">
-                    <button class="btn btn-primary btn-sm rounded">
-                      <i class="fas fa-cart-plus"></i>
-                    </button>
-                    <a href="detail.html" class="btn btn-outline btn-sm rounded"
-                      ><i class="fas fa-info-circle mr-2"></i>DETAILS</a
-                    >
-                  </div>
-                </div>
-                <div class="shop-image-div">
-                  <img src="./assets/denim.jpg" class="shop-image rounded" />
-                  <h4>
-                    <b
-                      >Product title(1Kg)
-                      <br />
-                      $200
-                    </b>
-                  </h4>
-                  <div class="text-center">
-                    <button class="btn btn-primary btn-sm rounded">
-                      <i class="fas fa-cart-plus"></i>
-                    </button>
-                    <a href="detail.html" class="btn btn-outline btn-sm rounded"
-                      ><i class="fas fa-info-circle mr-2"></i>DETAILS</a
-                    >
-                  </div>
-                </div>
-                <div class="shop-image-div">
-                  <img src="./assets/storage.jpg" class="shop-image rounded" />
-                  <h4>
-                    <b
-                      >Product title(1Kg)
-                      <br />
-                      $200
-                    </b>
-                  </h4>
-                  <div class="text-center">
-                    <button class="btn btn-primary btn-sm rounded">
+                  <p
+                    class="text-center"
+                    style="font-weight: 400; font-size: 23px;"
+                  >
+                    Ubiquiti wifi wall router
+                  </p>
+                  <div class="text-center div-details">
+                    <button class="btn btn-primary btn-sm rounded add-to-cart">
                       <i class="fas fa-cart-plus"></i>
                     </button>
                     <a href="detail.html" class="btn btn-outline btn-sm rounded"
@@ -576,8 +445,8 @@
                   >
                     Ubiquiti wifi wall router
                   </p>
-                  <div class="text-center">
-                    <button class="btn btn-primary btn-sm rounded">
+                  <div class="text-center div-details">
+                    <button class="btn btn-primary btn-sm rounded add-to-cart">
                       <i class="fas fa-cart-plus"></i>
                     </button>
                     <a href="detail.html" class="btn btn-outline btn-sm rounded"
@@ -586,55 +455,15 @@
                   </div>
                 </div>
                 <div class="shop-image-div">
-                  <img src="./assets/fan.jpg" class="shop-image rounded" />
-                  <h4>
-                    <b
-                      >Product title(1Kg)
-                      <br />
-                      $200
-                    </b>
-                  </h4>
-                  <div class="text-center">
-                    <button class="btn btn-primary btn-sm rounded">
-                      <i class="fas fa-cart-plus"></i>
-                    </button>
-                    <a href="detail.html" class="btn btn-outline btn-sm rounded"
-                      ><i class="fas fa-info-circle mr-2"></i>DETAILS</a
-                    >
-                  </div>
-                </div>
-                <div class="shop-image-div">
-                  <img src="./assets/denim.jpg" class="shop-image rounded" />
-                  <h4>
-                    <b
-                      >Product title(1Kg)
-                      <br />
-                      $200
-                    </b>
-                  </h4>
-                  <div class="text-center">
-                    <button class="btn btn-primary btn-sm rounded">
-                      <i class="fas fa-cart-plus"></i>
-                    </button>
-                    <a href="detail.html" class="btn btn-outline btn-sm rounded"
-                      ><i class="fas fa-info-circle mr-2"></i>DETAILS</a
-                    >
-                  </div>
-                </div>
-                <div class="shop-image-div">
-                  <img
-                    src="./assets/decor-cat.jpg"
-                    class="shop-image rounded"
-                  />
-                  <h4>
-                    <b
-                      >Product title(1Kg)
-                      <br />
-                      $200
-                    </b>
-                  </h4>
-                  <div class="text-center">
-                    <button class="btn btn-primary btn-sm rounded">
+                  <img src="./assets/mirror.jpg" class="shop-image rounded" />
+                  <p
+                    class="text-center"
+                    style="font-weight: 400; font-size: 23px;"
+                  >
+                    Ubiquiti wifi wall router
+                  </p>
+                  <div class="text-center div-details">
+                    <button class="btn btn-primary btn-sm rounded add-to-cart">
                       <i class="fas fa-cart-plus"></i>
                     </button>
                     <a href="detail.html" class="btn btn-outline btn-sm rounded"
@@ -644,15 +473,116 @@
                 </div>
                 <div class="shop-image-div">
                   <img src="./assets/fabrics.jpg" class="shop-image rounded" />
-                  <h4>
-                    <b
-                      >Product title(1Kg)
-                      <br />
-                      $200
-                    </b>
-                  </h4>
-                  <div class="text-center">
-                    <button class="btn btn-primary btn-sm rounded">
+                  <p
+                    class="text-center"
+                    style="font-weight: 400; font-size: 23px;"
+                  >
+                    Ubiquiti wifi wall router
+                  </p>
+                  <div class="text-center div-details">
+                    <button class="btn btn-primary btn-sm rounded add-to-cart">
+                      <i class="fas fa-cart-plus"></i>
+                    </button>
+                    <a href="detail.html" class="btn btn-outline btn-sm rounded"
+                      ><i class="fas fa-info-circle mr-2"></i>DETAILS</a
+                    >
+                  </div>
+                </div>
+                <div class="shop-image-div">
+                  <img src="./assets/fan.jpg" class="shop-image rounded" />
+                  <p
+                    class="text-center"
+                    style="font-weight: 400; font-size: 23px;"
+                  >
+                    Ubiquiti wifi wall router
+                  </p>
+                  <div class="text-center div-details">
+                    <button class="btn btn-primary btn-sm rounded add-to-cart">
+                      <i class="fas fa-cart-plus"></i>
+                    </button>
+                    <a href="detail.html" class="btn btn-outline btn-sm rounded"
+                      ><i class="fas fa-info-circle mr-2"></i>DETAILS</a
+                    >
+                  </div>
+                </div>
+                <div class="shop-image-div">
+                  <img src="./assets/storage.jpg" class="shop-image rounded" />
+                  <p
+                    class="text-center"
+                    style="font-weight: 400; font-size: 23px;"
+                  >
+                    Ubiquiti wifi wall router
+                  </p>
+                  <div class="text-center div-details">
+                   <button class="btn btn-primary btn-sm rounded add-to-cart">
+                      <i class="fas fa-cart-plus"></i>
+                    </button>
+                    <a href="detail.html" class="btn btn-outline btn-sm rounded"
+                      ><i class="fas fa-info-circle mr-2"></i>DETAILS</a
+                    >
+                  </div>
+                </div>
+                <div class="shop-image-div">
+                  <img src="./assets/eggs.jpg" class="shop-image rounded" />
+                  <p
+                    class="text-center"
+                    style="font-weight: 400; font-size: 23px;"
+                  >
+                    Ubiquiti wifi wall router
+                  </p>
+                  <div class="text-center div-details">
+                    <button class="btn btn-primary btn-sm rounded add-to-cart">
+                      <i class="fas fa-cart-plus"></i>
+                    </button>
+                    <a href="detail.html" class="btn btn-outline btn-sm rounded"
+                      ><i class="fas fa-info-circle mr-2"></i>DETAILS</a
+                    >
+                  </div>
+                </div>
+                <div class="shop-image-div">
+                  <img src="./assets/furniture.jpg" class="shop-image rounded" />
+                  <p
+                    class="text-center"
+                    style="font-weight: 400; font-size: 23px;"
+                  >
+                    Ubiquiti wifi wall router
+                  </p>
+                  <div class="text-center div-details">
+                    <button class="btn btn-primary btn-sm rounded add-to-cart">
+                      <i class="fas fa-cart-plus"></i>
+                    </button>
+                    <a href="detail.html" class="btn btn-outline btn-sm rounded"
+                      ><i class="fas fa-info-circle mr-2"></i>DETAILS</a
+                    >
+                  </div>
+                </div>
+                <div class="shop-image-div">
+                  <img src="./assets/lighting.jpg" class="shop-image rounded" />
+                  <p
+                    class="text-center"
+                    style="font-weight: 400; font-size: 23px;"
+                  >
+                    Ubiquiti wifi wall router
+                  </p>
+                  <div class="text-center div-details">
+                    <button class="btn btn-primary btn-sm rounded add-to-cart">
+                      <i class="fas fa-cart-plus"></i>
+                    </button>
+                    <a href="detail.html" class="btn btn-outline btn-sm rounded"
+                      ><i class="fas fa-info-circle mr-2"></i>DETAILS</a
+                    >
+                  </div>
+                </div>
+                <div class="shop-image-div">
+                  <img src="./assets/kitchen.jpg" class="shop-image rounded" />
+                  <p
+                    class="text-center"
+                    style="font-weight: 400; font-size: 23px;"
+                  >
+                    Ubiquiti wifi wall router
+                  </p>
+                  <div class="text-center div-details">
+                    <button class="btn btn-primary btn-sm rounded add-to-cart">
                       <i class="fas fa-cart-plus"></i>
                     </button>
                     <a href="detail.html" class="btn btn-outline btn-sm rounded"
@@ -662,15 +592,14 @@
                 </div>
                 <div class="shop-image-div">
                   <img src="./assets/denim.jpg" class="shop-image rounded" />
-                  <h4>
-                    <b
-                      >Product title(1Kg)
-                      <br />
-                      $200
-                    </b>
-                  </h4>
-                  <div class="text-center">
-                    <button class="btn btn-primary btn-sm rounded">
+                  <p
+                    class="text-center"
+                    style="font-weight: 400; font-size: 23px;"
+                  >
+                    Ubiquiti wifi wall router
+                  </p>
+                  <div class="text-center div-details">
+                    <button class="btn btn-primary btn-sm rounded add-to-cart">
                       <i class="fas fa-cart-plus"></i>
                     </button>
                     <a href="detail.html" class="btn btn-outline btn-sm rounded"
@@ -678,6 +607,8 @@
                     >
                   </div>
                 </div>
+                
+                
               </div>
               <!-- image row -->
             </div>
@@ -820,6 +751,17 @@
       </div>
       <!-- Copyright -->
     </footer>
+
+
+    <script>
+      var menu = document.getElementById('ham-menu')
+      var hideableMenu = document.getElementById('menu-items')
+
+      menu.addEventListener('click', function(){
+        hideableMenu.classList.toggle('hide')
+      })
+
+    </script>
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>

@@ -36,7 +36,7 @@ body a {
   transition: 0.5s;
 }
 .best-sellers .best-img h6 {
-  font-weight:450;
+  font-weight: 450;
 }
 
 div p .rating {
@@ -113,7 +113,6 @@ img:hover {
 }
 .cart-info {
   width: 80%;
-  height: 50px;
   float: right;
 }
 .cart-img {
@@ -163,7 +162,7 @@ img:hover {
 .comment-user {
   width: 60px;
   height: 60px;
-  border-radius:50%;
+  border-radius: 50%;
   transition: 0.5s;
   box-shadow: 3px 5px 15px rgb(95, 95, 95);
 }
@@ -172,7 +171,8 @@ img:hover {
 }
 
 .rel-img {
-  width: 90%;
+  width: 98%;
+  margin: auto;
   height: 150px;
   transition: 0.5s;
 }
@@ -180,107 +180,786 @@ img:hover {
   display: none;
 }
 .login {
-width: 40%;
-margin: auto;
+  width: 40%;
+  margin: auto;
 }
 .login.inputs {
-width: 60%;
-margin: auto;
+  width: 60%;
+  margin: auto;
 }
+@media screen and (max-width: 280px) {
+  .navbar .navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: centre;
+    text-align: center;
+  }
+  .login {
+    width: 100% !important;
+    margin: auto;
+  }
+  .login.inputs {
+    width: 100% !important;
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: 375px) {
-.navbar .navbar-collapse .navbar-nav{
-    display:flex;
-    flex-direction:column;
-    justify-content:centre;
-    text-align:center;
-}
-.login {
-  width: 100% !important;
-  margin: auto;
-}
-.login.inputs {
-  width: 100% !important;
-  margin: auto;
-}
+  .navbar .navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: centre;
+    text-align: center;
+  }
+  .blog-div img,
+  .blog-div p {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .blog-div img {
+    height: 220px;
+  }
+  .login {
+    width: 100% !important;
+    margin: auto;
+  }
+  .login.inputs {
+    width: 100% !important;
+    margin: auto;
+  }
+  .detail-post-page {
+    display: flex;
+    width: 100%;
+  }
+  .post-detail {
+    width: 100% !important;
+  }
+  .post-detail .post-image {
+    width: 100% !important;
+    height: 230px !important;
+  }
+  .post-detail .about-post {
+    width: 100% !important;
+  }
+  .post-detail .about-post {
+    width: 100% !important;
+  }
+  .post-detail .about-post p span img,
+  .post-detail .about-post p span .author {
+    margin-top: 7px;
+    padding-top: 0;
+  }
+  .comment {
+    width: 100%;
+  }
+  .post {
+    display: block;
+    width: 100%;
+  }
+  .related {
+    width: 100%;
+  }
+  .related .related-posts {
+    width: 100%;
+  }
+  .related .related-posts .rel-img {
+    width: 100%;
+    height: 220px;
+    margin: auto !important;
+  }
+  .map {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  .contact-form {
+    display: block !important;
+    width: 100%;
+    /* height: 100px; */
+  }
+  .details {
+    display: block !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .contact-info {
+    display: block !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* shop */
+  .menu {
+    display: none;
+  }
+  .shop-content {
+    position: relative;
+    display: flex !important;
+    width: 100%;
+  }
+  .header-paragraph {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-right: 20px !important;
+    z-index: 2;
+    width: 100% !important;
+  }
+  .input-form {
+    width: 100% !important;
+  }
+  .shop-img {
+    margin-top: 10em;
+    display: flex !important;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 375px !important;
+  }
+  .shop-image-div {
+    height: 320px !important;
+    margin-right: 10px;
+    width: 125px !important;
+  }
+  .shop-image-div img {
+    width: 100% !important;
+    height: 130px !important;
+  }
+  .shop-image-div p {
+    font-size: 18px !important;
+    font-weight: 450 !important;
+    width: 100% !important;
+  }
+  .shop-image-div .div-details {
+    display: inline-block;
+    width: 100% !important;
+  }
+  .list-btn {
+    display: none;
+  }
+  .shop-image-div .div-details .add-to-cart {
+    width: 86% !important;
+  }
+  body {
+    background-color: #fcfcfc;
+  }
+
+  /* cart */
+  .main-cart {
+    width: 100% !important;
+  }
+  .cart {
+    width: 40% !important;
+  }
+  .cart img {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .cart-info {
+    width: 60% !important;
+  }
+  .footer-info {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .footer-info .wish {
+    margin-left: 0 !important;
+  }
+  .payment-options {
+    display: inline;
+  }
+  .mpesa,
+  .accept-img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .paypal,
+  .master {
+    height: 30px !important;
+    width: 40px !important;
+  }
 }
 
+@media screen and (max-width: 500px) {
+  .navbar .navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: centre;
+    text-align: center;
+  }
 
-.shop-container{
+  .login {
+    width: 100% !important;
+    margin: auto;
+  }
+  .login.inputs {
+    width: 100% !important;
+    margin: auto;
+  }
+
+  .detail-post-page {
+    display: flex;
+    width: 100%;
+  }
+  .post-detail {
+    width: 100% !important;
+  }
+  .post-detail .post-image {
+    width: 100% !important;
+    height: 230px !important;
+  }
+  .post-detail .about-post {
+    width: 100% !important;
+  }
+  .post-detail .about-post {
+    width: 100% !important;
+  }
+  .post-detail .about-post p span img,
+  .post-detail .about-post p span .author {
+    margin-top: 7px;
+    padding-top: 0;
+  }
+  .comment {
+    width: 100%;
+  }
+  .post {
+    display: block;
+    width: 100%;
+  }
+  .related {
+    width: 100%;
+  }
+  .related .related-posts {
+    width: 100%;
+  }
+  .related .related-posts .rel-img {
+    width: 100%;
+    height: 220px;
+    margin: auto !important;
+  }
+
+  .map {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  .contact-form {
+    display: block !important;
+    width: 100%;
+    /* height: 100px; */
+  }
+  .details {
+    display: block !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .contact-info {
+    display: block !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* shop list */
+  .mid-div {
+    display: none !important;
+  }
+  .shop-list-div {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 0 !important;
+  }
+  .shop-list-img {
+    width: 50% !important;
+  }
+  .shop-list-img img {
+    width: 100% !important;
+    margin-right: 15px !important;
+    transition: 0.5s;
+  }
+  .btns {
+    display: inline;
+  }
+  .btns .btn {
+    text-align: center;
+  }
+
+  .shop-list-info {
+    position: absolute;
+    width: 50% !important;
+    right: 0;
+    display: block !important;
+  }
+
+  /* cart */
+  .main-cart {
+    width: 100% !important;
+  }
+  .cart {
+    width: 40% !important;
+  }
+  .cart img {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .cart-info {
+    width: 60% !important;
+  }
+  .footer-info {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .footer-info .wish {
+    margin-left: 0 !important;
+  }
+  .payment-options {
+    display: inline;
+  }
+  .mpesa,
+  .accept-img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .paypal,
+  .master {
+    height: 30px !important;
+    width: 40px !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .blog-div {
+    width: 100% !important;
+  }
+  .blog-div img {
+    width: 100% !important;
+    height: 50px;
+  }
+  .blog-div p {
+    width: 100% !important;
+  }
+  .map {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  .contact-form {
+    display: block !important;
+    width: 100%;
+    /* height: 100px; */
+  }
+  .details {
+    display: block !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .contact-info {
+    display: block !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* shop list */
+  .mid-div {
+    display: none !important;
+  }
+  .shop-list-div {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 0 !important;
+  }
+  .shop-list-img {
+    width: 50% !important;
+  }
+  .shop-list-img img {
+    width: 100% !important;
+    margin-right: 15px !important;
+    transition: 0.5s;
+  }
+  .btns {
+    display: inline;
+  }
+  .btns .btn {
+    text-align: center;
+  }
+
+  .shop-list-info {
+    position: absolute;
+    width: 50% !important;
+    right: 0;
+    display: block !important;
+  }
+
+  /* cart */
+  .main-cart {
+    width: 100% !important;
+  }
+  .cart {
+    width: 40% !important;
+  }
+  .cart img {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .cart-info {
+    width: 60% !important;
+  }
+  .footer-info {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .footer-info .wish {
+    margin-left: 0 !important;
+  }
+  .payment-options {
+    display: inline;
+  }
+  .mpesa,
+  .accept-img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .paypal,
+  .master {
+    height: 30px !important;
+    width: 40px !important;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .navbar .navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: centre;
+    text-align: center;
+  }
+  .blog {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .blog-div {
+    display: flex;
+    width: 300px;
+  }
+  .blog-div img {
+    width: 100% !important;
+    height: 200px !important;
+  }
+  .blog-div p {
+    width: 100% !important;
+  }
+  .post-detail .post-image {
+    width: 100% !important;
+    height: 300px !important;
+  }
+  .post-detail {
+    width: 98% !important;
+    margin-right: 10px;
+  }
+  .detail-post-page {
+    display: flex;
+    width: 100%;
+  }
+  .post-detail .about-post {
+    width: 100% !important;
+  }
+  .post-detail .about-post {
+    width: 100% !important;
+  }
+  .post-detail .about-post p span img,
+  .post-detail .about-post p span .author {
+    margin-top: 7px;
+    padding-top: 0;
+  }
+  .comment {
+    width: 100%;
+  }
+  .post {
+    display: block;
+    width: 100%;
+  }
+  .related {
+    width: 100%;
+  }
+  .related .related-posts {
+    width: 100%;
+  }
+  .related .related-posts .rel-img {
+    width: 100%;
+    height: 220px;
+    margin: auto !important;
+  }
+  .rel-img {
+    height: 100px;
+  }
+
+  .login {
+    width: 100% !important;
+    margin: auto;
+  }
+  .login.inputs {
+    width: 100% !important;
+    margin: auto;
+  }
+
+  /* shop list */
+  .mid-div {
+    display: none !important;
+  }
+  .shop-list-div {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 0 !important;
+  }
+  .shop-list-img {
+    width: 50% !important;
+  }
+  .shop-list-img img {
+    width: 100% !important;
+    margin-right: 15px !important;
+    transition: 0.5s;
+  }
+  .btns {
+    display: inline;
+  }
+  .btns .btn {
+    text-align: center;
+  }
+
+  .shop-list-info {
+    position: absolute;
+    width: 50% !important;
+    right: 0;
+    display: block !important;
+  }
+
+  /* cart */
+  .main-cart {
+    width: 100% !important;
+  }
+  .cart {
+    width: 40% !important;
+  }
+  .cart img {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .cart-info {
+    width: 60% !important;
+  }
+  .footer-info {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .footer-info .wish {
+    margin-left: 0 !important;
+  }
+  .payment-options {
+    display: inline;
+  }
+  .mpesa,
+  .accept-img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .paypal,
+  .master {
+    height: 30px !important;
+    width: 40px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  /* shop list */
+  .mid-div {
+    display: none !important;
+  }
+  .shop-list-div {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 0 !important;
+  }
+  .shop-list-img {
+    width: 50% !important;
+  }
+  .shop-list-img img {
+    width: 100% !important;
+    margin-right: 15px !important;
+    transition: 0.5s;
+  }
+  .btns {
+    display: inline;
+  }
+  .btns .btn {
+    text-align: center;
+  }
+
+  .shop-list-info {
+    position: absolute;
+    width: 50% !important;
+    right: 0;
+    display: block !important;
+  }
+  /* cart */
+  .main-cart {
+    width: 100% !important;
+  }
+  .cart {
+    width: 40% !important;
+  }
+  .cart img {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .cart-info {
+    width: 60% !important;
+  }
+  .footer-info {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .footer-info .wish {
+    margin-left: 0 !important;
+  }
+  .payment-options {
+    display: inline;
+  }
+  .mpesa,
+  .accept-img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .paypal,
+  .master {
+    height: 30px !important;
+    width: 40px !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .login {
+    width: 100% !important;
+    margin: auto;
+  }
+  .blog {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .blog-div img {
+    width: 400px;
+    height: 250px;
+  }
+  .login.inputs {
+    width: 100% !important;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .login {
+    width: 100% !important;
+    margin: auto;
+  }
+  .blog {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .blog-div img {
+    width: 400px;
+    height: 250px;
+  }
+  .post-detail .post-image {
+    width: 97% !important;
+    height: 400px;
+  }
+  .login.inputs {
+    width: 100% !important;
+    margin: auto;
+  }
+}
+
+.shop-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.menu{
-  width:30%;
+.menu {
+  width: 30%;
   font-weight: 450;
   cursor: pointer;
 }
-.shop-img{
+
+.shop-img {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.shop-content{
-  width:70%;
+.shop-content {
+  width: 70%;
 }
-.shop-content .header-paragraph{
+.shop-content .header-paragraph {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   flex-direction: row;
 }
-.shop-img .shop-image{
+.shop-img .shop-image {
   width: 220px;
   height: 200px;
-  transition: .5s;
+  transition: 0.5s;
 }
-.shop-image-div{
+.shop-image-div {
   width: 220px;
   height: 370px;
   margin-bottom: 1em !important;
 }
-.shop-image-div h4{
+.shop-image-div h4 {
   font-weight: 330;
   text-align: center;
   margin-top: 1em;
 }
-.mydiv{
+.mydiv {
   width: 220px;
   height: 240px;
   margin-bottom: 1em !important;
 }
 .img-div .detail-img {
-    width: 95%;
-    height: 470px;
-    margin-right: 0;
-    transition: 0.5s;
+  width: 95%;
+  height: 470px;
+  margin-right: 0;
+  transition: 0.5s;
 }
-.ass-img{
+.ass-img {
   width: 100%;
   margin-top: 1em;
 }
-.ass-img .ass-image{
+.ass-img .ass-image {
   width: 110px;
   margin-left: 20px;
   height: 115px;
 }
-.latest-image{
+.latest-image {
   width: 220px;
   height: 430px;
   align-items: center;
 }
-.map{
+.map {
   margin-bottom: 5em;
 }
-.contact-form{
+.contact-form {
   display: flex;
   justify-content: center;
 }
-.details{
+.details {
   width: 30%;
   margin-left: 80px;
 }
-.contact-info{
+.contact-info {
   width: 70%;
   margin-left: 40px;
 }
@@ -288,43 +967,44 @@ margin: auto;
   width: 100%;
   /* background-color: yellow; */
 }
-.shop-list-div{
+.shop-list-div {
   display: flex;
   width: 100%;
   /* background-color: blue; */
 }
-.shop-list-img{
+.shop-list-img {
   width: 25%;
   /* background-color: aqua; */
-
 }
-.shop-list-img img{
+.shop-list-img img {
   width: 200px;
   height: 200px;
 }
-.shop-list-info{
+.shop-list-info {
   display: inline-block;
   width: 70%;
   height: 200px;
   margin-left: 0;
   /* background-color: red; */
 }
-.accept-img{
+.accept-img {
   width: 70px;
   height: 70px;
 }
-.master{
+.master {
   width: 70px;
   height: 50px;
 }
-.paypal{
+.paypal {
   width: 70px;
   height: 45px;
 }
-.mpesa, .paypal, .master{
+.mpesa,
+.paypal,
+.master {
   margin-left: 20px;
 }
-.card .btn-container{
+.card .btn-container {
   width: 95%;
   margin: 2em auto;
 }
